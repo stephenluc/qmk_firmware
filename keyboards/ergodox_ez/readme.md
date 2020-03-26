@@ -39,3 +39,10 @@ To flash with ´teensy-loader-cli´:
 
 You may want to enable QMK_KEYS_PER_SCAN because the Ergodox has a relatively
 slow scan rate.
+
+## How to build
+
+  - Go to [orgx](https://configure.ergodox-ez.com/ergodox-ez/layouts/lbVA0/latest/0) and sign in
+  - Modify keyboard and 'download source'
+  - Add `WHOAMI` macro
+  - Follow steps above

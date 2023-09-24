@@ -41,7 +41,7 @@ You may want to enable QMK_KEYS_PER_SCAN because the Ergodox has a relatively
 slow scan rate.
 
 ## How to build
-
+> Note: This is out of date, follow other keyboards to see if you can update if you ever get this keyboard again
   - Go to [orgx](https://configure.ergodox-ez.com/ergodox-ez/layouts/lbVA0/latest/0) and sign in
   - Modify keyboard and 'download source'
   - Add `WHOAMI` macro

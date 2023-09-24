@@ -1,5 +1,4 @@
-Atreus
-===
+# Atreus
 
 A 62 key variant of the Atreus keyboard.
 
@@ -26,3 +25,19 @@ Copy and adjust keyboard then compile and flash
 qmk compile -kb atreus62 -km stephenluc
 qmk flash -kb atreus62 -km stephenluc
 ```
+
+# Latest Layout
+**Base Layer**
+![Quefrency Rev4](./layout_renders/atreus62-base-layer.png)
+
+**Function Layer**
+![Quefrency Rev4](./layout_renders/atreus62-function-layer.png)
+
+**Number Layer**
+![Quefrency Rev4](./layout_renders/atreus62-number-layer.png)
+
+**Mouse Layer**
+![Quefrency Rev4](./layout_renders/atreus62-mouse-layer.png)
+
+**System Layer**
+![Quefrency Rev4](./layout_renders/atreus62-system-layer.png)

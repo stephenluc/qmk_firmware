@@ -28,3 +28,6 @@ Copy and adjust keyboard then compile and flash
 qmk compile -kb keebio/quefrency/rev4 -km stephenluc
 qmk flash -kb keebio/quefrency/rev4 -km stephenluc
 ```
+
+# Latest Layout
+![Quefrency Rev4](./quefrency-rev4-layout.png)

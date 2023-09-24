@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 /*
   Keebio Quefrency Rev4 v9.23.2023
+  http://www.keyboard-layout-editor.com/#/gists/7e98ec1e6455ce3ba72cbb26276b34ba
 */
 
 #include QMK_KEYBOARD_H
@@ -20,7 +21,7 @@ enum atreus62_layers {
   _BL, // Base Layer
   _FL, // Function Layer
   _NL, // Number Pad Layer
-  _RL, // Regular Layer
+  _TL, // Traditional Layer
   _SL, // System Layer
 };
 
@@ -71,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BL] = LAYOUT_65_with_macro(
     KC_MPLY, MO(_SL), KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_BSPC, KC_BSPC, KC_DEL,
     KC_F1,   KC_F2,   KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC, KC_BSLS, MO(_SL),
-    KC_F3,   KC_F4,   KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, KC_ENT,  TO(_RL),
+    KC_F3,   KC_F4,   KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, KC_ENT,  TO(_TL),
     KC_F5,   KC_F6,   KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT, KC_UP,   TO(_BL),
     KC_F7,   KC_F8,   MO(_NL), KC_GRV, KC_LALT, KC_LGUI, KC_BSPC,           _______, KC_SPC,  KC_RALT, MO(_FL), _______, KC_LEFT, KC_DOWN, KC_RGHT
   ),
@@ -120,7 +121,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _x_x_x_, _______, _______, _______, _______,          _______, KC_KP_0, KC_DOT, _______, _______, _______, _______, _______
   ),
 
-  /* LAYOUT _RL: (Regular Layer) Regular Keyboard Layer
+  /* LAYOUT _TL: (Traditional Layer) Traditional Keyboard Layer
    * http://www.keyboard-layout-editor.com/#/gists/e4f58223f7700c5cf182468135a7ee1c
    *   ┌─────┬─────┐ ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┐     ┌─────┬─────┬─────┬─────┬─────┬─────┬───────────┬─────┐
    *   │     │     │ │     │     │     │     │     │     │     │     │     │     │     │     │     │     │           │     │
@@ -134,7 +135,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    *   │     │     │ │ Ctrl │       │      │       │   Space    │     │                │      │      │   │     │     │     │
    *   └─────┴─────┘ └──────┴───────┴──────┴───────┴────────────┘     └────────────────┴──────┴──────┘   └─────┴─────┴─────┘
    */
-  [_RL] = LAYOUT_65_with_macro(
+  [_TL] = LAYOUT_65_with_macro(
     _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
     _______, _______, KC_CAPS, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _x_x_x_,

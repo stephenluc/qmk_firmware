@@ -18,7 +18,7 @@
 // entirely and just use numbers.
 enum atreus62_layers {
   _BL, // Base Layer
-  _FL, // Media Layer
+  _FL, // Function Layer
   _NL, // Number Pad Layer
   _RL, // Regular Layer
   _SL, // System Layer
@@ -55,6 +55,7 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* LAYOUT _BL: (Base Layer) Default MacOS Layer
+   * http://www.keyboard-layout-editor.com/#/gists/8c3a7eee167112e7aa83855845d7a03f
    *   ┌─────┬─────┐ ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┐     ┌─────┬─────┬─────┬─────┬─────┬─────┬───────────┬─────┐
    *   │Knob │M(SL)│ │ Esc │  1  │  2  │  3  │  4  │  5  │  6  │     │  7  │  8  │  9  │  0  │  -  │  =  │ Backspace │ Del │
    *   ├─────┼─────┤ ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┘  ┌──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬────────┼─────┤
@@ -76,6 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   /* LAYOUT _FL: (Function Layer) Function and Media Key Layer
+   * http://www.keyboard-layout-editor.com/#/gists/0dd44b5d83618d7882bb7ac4c35776a5
    *   ┌─────┬─────┐ ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┐     ┌─────┬─────┬─────┬─────┬─────┬─────┬───────────┬─────┐
    *   │     │     │ │     │ F1  │ F2  │ F3  │ F4  │ F5  │ F6  │     │ F7  │ F8  │ F9  │ F10 │ F11 │ F12 │    Del    │     │
    *   ├─────┼─────┤ ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┘  ┌──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬────────┼─────┤
@@ -85,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    *   ├─────┼─────┤ ├─────────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┐  └──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴───────┬─────┼─────┤
    *   │     │     │ │            │Bri- │Bri+ │     │     │     │     │     │     │     │     │     │          │     │     │
    *   ├─────┼─────┤ ├──────┬─────┴─┬───┴──┬──┴────┬┴─────┴─────┤     ├─────┴─────┴────┬┴─────┼─────┴┬───┬─────┼─────┼─────┤
-   *   │     │     │ │      │       │      │       │   Hyper    │     │                │GUI_TG│_x_x_x│   │     │     │     │
+   *   │     │     │ │      │       │      │ Hyper │            │     │                │GUI_TG│_x_x_x│   │     │     │     │
    *   └─────┴─────┘ └──────┴───────┴──────┴───────┴────────────┘     └────────────────┴──────┴──────┘   └─────┴─────┴─────┘
    */
   [_FL] = LAYOUT_65_with_macro(
@@ -97,6 +99,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   /* LAYOUT _NL: (Numberpad Layer) Number Pad Layer
+   * http://www.keyboard-layout-editor.com/#/gists/84bd1d4ce2df1ca6dcc9da2bd40f7b1d
    *   ┌─────┬─────┐ ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┐     ┌─────┬─────┬─────┬─────┬─────┬─────┬───────────┬─────┐
    *   │     │     │ │     │     │     │     │     │     │     │     │NumLk│  /  │  *  │  -  │     │     │           │     │
    *   ├─────┼─────┤ ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┘  ┌──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬────────┼─────┤
@@ -118,6 +121,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   /* LAYOUT _RL: (Regular Layer) Regular Keyboard Layer
+   * http://www.keyboard-layout-editor.com/#/gists/e4f58223f7700c5cf182468135a7ee1c
    *   ┌─────┬─────┐ ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┐     ┌─────┬─────┬─────┬─────┬─────┬─────┬───────────┬─────┐
    *   │     │     │ │     │     │     │     │     │     │     │     │     │     │     │     │     │     │           │     │
    *   ├─────┼─────┤ ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┘  ┌──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬────────┼─────┤
@@ -139,6 +143,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   /* LAYOUT _SL: (System Layer) System Layer
+   * http://www.keyboard-layout-editor.com/#/gists/ead13f506f37748bcba7496d9c15bb36
    *   ┌─────┬─────┐ ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┐     ┌─────┬─────┬─────┬─────┬─────┬─────┬───────────┬─────┐
    *   │xxxx │_x_x_│ │xxxx │xxxx │xxxx │xxxx │xxxx │xxxx │xxxx │     │xxxx │xxxx │xxxx │xxxx │xxxx │xxxx │    xxxx   │xxxx │
    *   ├─────┼─────┤ ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┘  ┌──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬────────┼─────┤

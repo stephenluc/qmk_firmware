@@ -15,9 +15,9 @@
 // entirely and just use numbers.
 enum atreus62_layers {
   _BL, // Base Layer
-  _FL, // Funcion Layer
-  _NL, // Number Pad Layer
-  _ML, // Media Layer
+  _FL, // Function Layer
+  _NL, // Numberpad Layer
+  _ML, // Mouse Layer
   _SL, // System Layer
 };
 
@@ -52,6 +52,7 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* LAYOUT _BL: (Base Layer) Base Layer
+   * http://www.keyboard-layout-editor.com/#/gists/13f44b58c4a269189bdfc3b754037098
    * ,-----------------------------------------.                ,-----------------------------------------.
    * |  =   |   1  |   2  |   3  |   4  |   5  |                |   6  |   7  |   8  |   9  |   0  |  -   |
    * |------+------+------+------+------+------|                |------+------+------+------+------+------|
@@ -72,7 +73,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     MO(_NL), KC_GRV,  KC_INS,  KC_LALT, KC_LGUI, KC_BSPC, LT(_ML,KC_ESC),
                                                                    KC_ENT,  KC_SPC,  KC_UP,   KC_DOWN, KC_LBRC, KC_RBRC, MO(_FL)),
 
-  /* LAYOUT _FL: (Function Layer) Function Layer
+  /* LAYOUT _FL: (Function Layer) Function and Media Controls
+   * http://www.keyboard-layout-editor.com/#/gists/6b6020c9a3eb3a56f9c3e565d98d48c1
    * ,-----------------------------------------.                ,-----------------------------------------.
    * |      |  F1  |  F2  |  F3  |  F4  |  F5  |                |  F6  |  F7  |  F8  |  F9  |  F0  | F11  |
    * |------+------+------+------+------+------|                |------+------+------+------+------+------|
@@ -82,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------||      ||      ||------+------+------+------+------+------|
    * |      | Bri- | Bri+ |      |      |      ||Hyper ||      ||      |      |      |  Up  |      |      |
    * |------+------+------+------+------+------||      ||      ||------+------+------+------+------+------|
-   * |MO(SL)|      |      |      |      | Del  |`------'`------'|      |      | Left | Down |Right |_x_x_x|
+   * |MO(SL)|      |      |      |      |      |`------'`------'|      |      | Left | Down |Right |_x_x_x|
    * `-----------------------------------------'                `-----------------------------------------'
    */
   [_FL] = LAYOUT(
@@ -90,9 +92,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_CAPS, KC_MPRV, KC_MPLY, KC_MNXT, KC_MSTP, _______,                   _______, _______, _______, _______, _______, KC_F12,
     _______, KC_VOLD, KC_VOLU, KC_MUTE, _______, _______,                   _______, _______, _______, _______, _______, _______,
     _______, KC_BRID, KC_BRIU, _______, _______, _______,                   _______, _______, _______, KC_UP,   _______, _______,
-    MO(_SL), _______, _______, _______, _______, KC_DEL,  KC_HYPR, _______, _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, _x_x_x_),
+    MO(_SL), _______, _______, _______, _______, _______, KC_HYPR, _______, _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, _x_x_x_),
 
   /* LAYOUT _NL: (Numpad Layer) Number Pad Layer
+   * http://www.keyboard-layout-editor.com/#/gists/b12ade81c305f652dc549f00cadef062
    * ,-----------------------------------------.                ,-----------------------------------------.
    * |      |      |      |      |      |      |                |      |Num_lk|  /   |  *   |  -   |      |
    * |------+------+------+------+------+------|                |------+------+------+------+------+------|
@@ -113,6 +116,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _x_x_x_, _______, _______, _______, _______, _______, KC_PEQL, KC_PENT, KC_P0,   KC_P0,   KC_P0,   KC_PDOT, KC_PEQL, MO(_SL)),
 
   /* LAYOUT _ML: (Mouse Layer) Mouse Controls
+   * http://www.keyboard-layout-editor.com/#/gists/44c3ff6d3239dce8a599c7557fda43ba
    * ,-----------------------------------------.                ,-----------------------------------------.
    * |      |      |      |      |      |      |                |      |      |      |      |      |      |
    * |------+------+------+------+------+------|                |------+------+------+------+------+------|
@@ -132,7 +136,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______, _______, _x_x_x_, KC_BTN3, KC_BTN1, KC_BTN2, _______, _______, _______, _______),
 
-  /* LAYOUT _SL: (System Layer) System commands
+  /* LAYOUT _SL: (System Layer) System Commands
+   * http://www.keyboard-layout-editor.com/#/gists/fb89ca44fcbec4799596293cbc7d2a79
    * ,-----------------------------------------.                ,-----------------------------------------.
    * | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx |                | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx |
    * |------+------+------+------+------+------|                |------+------+------+------+------+------|

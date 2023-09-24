@@ -116,4 +116,4 @@ via*.json
 !LICENSE*
 !license*
 !.gitignore
-!README
+!/.github/README.md

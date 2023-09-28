@@ -18,6 +18,7 @@ See [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools)
 Create a new default mapping and file so qmk `compile` and `flash` work
 ```
 qmk new-keymap -kb atreus62
+~/qmk_firmware/keyboards/atreus62/keymaps/stephenluc/keymap.c
 ```
 
 Copy and adjust keyboard then compile and flash

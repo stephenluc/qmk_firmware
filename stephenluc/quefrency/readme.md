@@ -21,6 +21,7 @@ A build guide for this keyboard can be found here: [Keebio Build Guides](https:/
 Create a new default mapping and file so qmk `compile` and `flash` work
 ```
 qmk new-keymap -kb keebio/quefrency/rev4
+~/qmk_firmware/keyboards/keebio/quefrency/keymaps/stephenluc/keymap.c
 ```
 
 Copy and adjust keyboard then compile and flash

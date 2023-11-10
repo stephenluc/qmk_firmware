@@ -84,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------||      ||      ||------+------+------+------+------+------|
    * |      | Bri- | Bri+ |      |      |      ||      ||      ||      |      |      |  Up  |      |      |
    * |------+------+------+------+------+------||      ||      ||------+------+------+------+------+------|
-   * |MO(SL)|      |      |      |      |      |`------'`------'|      |      | Left | Down |Right |_x_x_x|
+   * |MO(SL)|      |      | Meh  |Hyper |      |`------'`------'|      |      | Left | Down |Right |_x_x_x|
    * `-----------------------------------------'                `-----------------------------------------'
    */
   [_FL] = LAYOUT(
@@ -92,7 +92,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_CAPS, KC_MPRV, KC_MPLY, KC_MNXT, KC_MSTP, _______,                   _______, _______, _______, _______, _______, KC_F12,
     _______, KC_VOLD, KC_VOLU, KC_MUTE, _______, _______,                   _______, _______, _______, _______, _______, _______,
     _______, KC_BRID, KC_BRIU, _______, _______, _______,                   _______, _______, _______, KC_UP,   _______, _______,
-    MO(_SL), _______, _______, _______,  KC_MEH, KC_HYPR, _______, _______, _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, _x_x_x_),
+    MO(_SL), _______, _______,  KC_MEH, KC_HYPR, _______, _______, _______, _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, _x_x_x_),
 
   /* LAYOUT _NL: (Numpad Layer) Number Pad Layer
    * http://www.keyboard-layout-editor.com/#/gists/b12ade81c305f652dc549f00cadef062

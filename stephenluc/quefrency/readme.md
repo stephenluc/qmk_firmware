@@ -18,13 +18,25 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 A build guide for this keyboard can be found here: [Keebio Build Guides](https://docs.keeb.io)
 
 # Steps to building this keyboard
-Create a new default mapping and file so qmk `compile` and `flash` work
+Install QMK CLI
+```
+brew install qmk/qmk/qmk
+export QMK_HOME='~/qmk_firmware'
+qmk setup
+```
+
+Create a new default mapping and file so qmk `compile` and `flash` work (only needed once)
 ```
 qmk new-keymap -kb keebio/quefrency/rev4
 ~/qmk_firmware/keyboards/keebio/quefrency/keymaps/stephenluc/keymap.c
 ```
 
-Copy and adjust keyboard then compile and flash
+Copy keymap to the QMK keymaps directory
+```
+cp ~/qmk_firmware/stephenluc/quefrency/keymap.c ~/qmk_firmware/keyboards/keebio/quefrency/keymaps/stephenluc/keymap.c
+```
+
+Compile and flash
 ```
 qmk compile -kb keebio/quefrency/rev4 -km stephenluc
 qmk flash -kb keebio/quefrency/rev4 -km stephenluc
